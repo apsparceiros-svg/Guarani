@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeria Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 style="text-align:center">Galeria</h1>
+  <div id="galeria1" class="galeria"></div>
+
+  <script src="galeria.js"></script>
+  <script>
+    // Exemplo de uso
+    const galeria1 = new Galeria("galeria1", { autoplay: true, delay: 3000 });
+    galeria1.carregarImagens([
+      "https://lh3.googleusercontent.com/pw/AP1GczPTGpWQArF5HHHETTyj_KUbE0jAMqa4fjs0SCwULXWNA4Q6gO2RqSXkhjwmlNMssoIzP-MvDpN5ODXuGpTVebQ3WjCTXqfrPEV5BpPGeOv2qePWXfszc6qwVDKpYXeFTmBrPJSA5e8TcfStif7ymSwM=w882-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczM5ygNs3lTGYIgxvwyGoRG3uqvy2jErfLJtsO7-AIk0XMRwpfgd6F1PazZoXPtMMZ9REjYMuuDHJXb2UHfATkpAZpFTqpjJQE765BR1fY_P0MeoPvTK82WQhOJA9rDdAZZGZzYW2BgwpAq9ZB-GFmdU=w847-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczONwDry2Gv7zLsQ8OOTC3yk4Is2QomkdickzPV47ERCb2sFcrtxGgl19vRdm5miGDqHnNLOOHg3IrJJbH9uDkk34V9Zm1hA3BRSzhaJ9GF1K2DDJsZP8sPT64dkKeyzCZHFbZUH12OuZoy9OR2NO8XX=w767-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczO5w-SRw8qbF17u06R-xniqUFGtiugVOF9Kw39ALw-myma-9Zur5qHenc5foBgfFDV55Zg3ytc7R9K1MwLYAYhFMFS0XgiyrbiCNxYIIOWobCNUXDXPEvkXMukiAYbw0qJstc51nxc1hBr0YGt5LCKb=w765-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczOSqHyuFg8cz1JXD4FNYncbcoeBUyTL2UKwZqNKP2UqyxUJ4b9h4MrET9ozc80bHif1IO4VPwXI1EanJwIyCXqtYFBHOLe6OIBruImBKEaxbXJkFISNU_wYo_bvglI9rnHfNlBmOcbw7b27OZ-BBCss=w1069-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczNX2tX9uq4ojP-mgskEgFpajDDO38M5mMIoW-MCCQYcZWddott2oCqWN0JPhSYJ-1Ud0iz5oKOrG-2T2JbFFch53KLm-CaZIzbTJt9cKZvr5ptylqxOA-_-PtT6q2OMvf5Ek5UV2a-YLz7NOLYOEP2s=w1272-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczPUaIjp79ypDNkg6qELWuOGijO1PsndVOV306WQ8hBLrTgD_e3OGe3VaeokD895T8UUDdXGjTrGOaD_MoQgQRLrJOjuJkmyV6Hn5zWbxLJJUTPHkbV2bf8hsqLY83JMLna-aVQtxp6yV8UHcu4ZXg1l=w1358-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczPahKurBsGSX-3qoC-o38ac2V3D1N0gJd5wzjk9hR85NJVygvGSDO7AIOrJXZo_bJgvJ5o1WpuQbz4s2gj_4QxqLCQ_5TA6tgmnzVuV1rRlgTowobCoeScCoYiJpoV2bC1YtpCLzQ_7KsrXgfrmeYrL=w1358-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczOfjRTgBAKEZxL82QV6KyVbv5lw0-vDazmoYA2E0EzMzxnvO81AsZeLmHcNOXWMVbmbhxoNQF-reOkaLVMR_SZfuGsYtWHP01_cFPCPiUw8wuPC2KBMo_8MKcdidrzz4kl_a-e_Z9CibSZUjWV_8yxz=w884-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczMonMV4Z3grdP5vYZuu8lRBS05sFAkVgD2wpFSalJk6rNC-xO68iE70RWE9KNoJj5RZbdv28yAvvnjQqKFZthj6Ri1V9g_AUrAEw0LEdYzKCT4tkF7Gm9KEogQ-g2PKyRVWgs2BedHgRx7uAgryXHB4=w1048-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczPYthPqJaYsHcyVrYU2AsJA_x7XjG-cSkc8J3DcOnexoeV-CzcbiX4m0AlKDAfAremEXbtR0re1nsxdyQWSOAytc9OlabiueTrtqN9D3hp4wAdI-hSx9QxXmlonvny0Zzofzf016HGjSVEewO0ZcYtT=w543-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczMNbxRbWIbAedG_na8RGAJ3IJ3mEyE3wklEzSMu4IQju5zUqtj5U-hM-OxMGOEODFuyD2AMAVqdnUBRxoYJXhgjDaMgkvrodZZG0ze52DTHEQQA2oefuYqBRhkDwOcTVK9J40I_EI7as4jWbCgGGne8=w543-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczOhvYHZes-kzIkujSleo9mIVg4Q_oVNTspdWsxwNbmS93ozX_KDvolkolh8286peqYuoptXQJXLMaWTZBmSOyWHO_KbucYkcDkv4EUJ8EgffaXdJHGxUTEb2_VAincwz4cZdeRnXRWwEvzACfdkFOiP=w543-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczO0gT53InpQVXTlghvZmOAtgXiVfosj-iTtG_ZV_I7AiDGRPca81UKBgA8PWFjoMdfVquOcHWXvWaPbS4Z1-eS7WFul9N0tgB0IEevh4RwGwXMwtw6pCY-N8AUWNnecUlouoP95TRSyoZkylzHaXIdg=w543-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczOxaa1o4mAKZ76mJCuR_gWrol9OX1Uf86tHVyNyAlVL6fhIjj2iI5nTbjyCs85S1TJe85CH-o4Bm9R-QtJeXh9KdJYcdc-3r_Mt8_2-kCbPAvIuCX63Va3tHVdh3KGPTf7Q2wMSZlaqcxldop0QtM9s=w543-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczOIiu9XfavDxdajthmAaG-HuCQ9ANiDNu3IhEINFfiSvIXe9VLXVMSyFaO3w35FJ5RPREEoFGTqc5GXnesW57RbeVl5TEK7oxCmvmZkfik4GR6JZrtmil-opjs-iN2-66p685OOc3csQk101bSZOOdB=w543-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczNrEn4IdENqBX59DqlLXNIrBSDCqfzI5AszH1wrPBMBJKCBljKb-4yggIqM1SRqHFysiJTBAyFtx-La_8Q-SO3_7Jep3YGLuJCbxyxIO--1-4oG_VYn_0ow31yRhDGFf0u0xDOV1SF4kAOYmTpd_Asj=w543-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczNfn2eHrkp_1wi94WkB8-nMjGOk8irdbTBpq9-_UPfzQhHK2QUTTetuAwSpfgEwMQtsHB8A-7EgMsqsfmfHwF8wy5vzLSJ5cEhXY-3BFyAcGQms6EOmx-M5Ez-0auR926JiPM63PKbV98oftxi7mcUC=w382-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczO7S2CcghAg3R8KQvSrKnuJC730VFL9lPbgX4dbPHHKjpFjy_7FoQNBYUdubsXrf07WfGiPn4cpsJUS3byrdNWRi7iWaQFoMoDSSaBRRqCtVxO57QVxaaff5vo-jvnz5-vOPHifG3hQ27OCbHPjWV3f=w382-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczMzgFX-DdHhj0hUU2DA_QQxoY76BC4Od5lo3zrfvrYvhMiSc8joHzqQa4hNefYApLW1lcUrDhgY_YPKzG2hZGPd3AbEG49WXlrFrPbTPDVQI2_uV0uynt3Tn9Rc2ptI-aWVxtHnQr3TZ2fq4RX0xsfP=w382-h679-s-no-gm?authuser=0",
+      "https://lh3.googleusercontent.com/pw/AP1GczPnbLpX2ZBrhtXU2WKGj4fkghkSFBW4_co9guhsZRx4mep8HuZyCKUtHvM9-859GlAE4P1SJtuxV5TINJ69pne78zqyml1Oxdz9UzEpQAuRqgt_P7kSzmeAmt5C8NT-zdYF0igHXS2074EYbwFD284s=w382-h679-s-no-gm?authuser=0"
+    ]);
+  </script>
+</body>
+</html>
